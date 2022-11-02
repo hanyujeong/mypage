@@ -67,9 +67,28 @@
         .wrap > a:hover {
             background-color: #ecdede;
         }
-        .rtan{
-       <h1>Video</h1>
+        .rtan {
+            width: 280px;
+            height: 261px;
+            background-image: url('kirby7.png');
+            background-position: center;
+            position: absolute;
+            bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="profile"></div>
+        <h1 class="main">유댕커비</h1>
+        <p class="sub">상어는 유댕이를 좋아한대요~</p>
+        <a target="_blank" href="https://www.instagram.com/happy_shuya/">슈야 인스타그램</a>
+        <a target="_blank" href="https://www.instagram.com/p/Cb9uvybLI2S/">상어는 마싯쪄! 욤뇸뇽욤</a>
+        <a target="_blank" href="https://www.instagram.com/p/CbCyTEEvC4V/">사탕해! 빼빼로 조~~~!</a>
+        
+         <h1>Video</h1>
     <video class="video" src="kirby sound ani 221031.mp4" autoplay muted loop></video>
+// 우리 눈에 보이지 않고 있는 비디오 태그!
     <canvas class="canvas" width="600" height="400">이 브라우저는 캔버스를 지원하지 않습니다.</canvas>
 
     <script>
@@ -85,21 +104,11 @@
 
       function render() {
         ctx.drawImage(videoElem, 0, 0, 600, 400);
+        // 첫 번째 인자로 비디오를 넣어준다.
         requestAnimationFrame(render);
       }
     </script>
-        }
         
-    </style>
-</head>
-<body>
-    <div class="wrap">
-        <div class="profile"></div>
-        <h1 class="main">유댕커비</h1>
-        <p class="sub">상어는 유댕이를 좋아한대요~</p>
-        <a target="_blank" href="https://www.instagram.com/happy_shuya/">슈야 인스타그램</a>
-        <a target="_blank" href="https://www.instagram.com/p/Cb9uvybLI2S/">상어는 마싯쪄! 욤뇸뇽욤</a>
-        <a target="_blank" href="https://www.instagram.com/p/CbCyTEEvC4V/">사탕해! 빼빼로 조~~~!</a>
         <div class="rtan"></div>
     </div>
 </body>
