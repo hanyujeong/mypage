@@ -71,7 +71,7 @@
             width: 280px;
             height: 261px;
             margin-top: 900px;
-       
+            margin-bottom: 5px
             background-image: url('kirby7.png');
             background-position: center;
             position: absolute;
@@ -86,7 +86,7 @@
         <p class="sub">상어는 유댕이를 좋아한대~요~>-<</p>
         <a target="_blank" href="https://www.instagram.com/happy_shuya/">슈야 인스타그램</a>
         <a target="_blank" href="https://www.instagram.com/p/Cb9uvybLI2S/">상어는 마싯쪄! 욤뇸뇽용뇸</a>
-        <a target="_blank" href="https://hanyujeong.github.io/mypage/kirby sound ani 221031.mp4">아래 비디오 원본입니땅!'(소리나요)</a>
+        <a target="_blank" href="https://hanyujeong.github.io/mypage/kirby sound ani 221031.mp4">아래 비디오 원본입니땅!(소리나요)</a>
         
          <h1>Video</h1>
     <video class="video" src="kirby sound ani 221031.mp4" autoplay muted loop></video>
@@ -104,7 +104,9 @@
       const videoElem = document.querySelector('.video');
       videoElem.addEventListener('canplaythrough', render);
 
-      
+      function render() {
+        ctx.drawImage(videoElem, 0, 0, 600, 350);
+        requestAnimationFrame(render);
      
     </script>
        
