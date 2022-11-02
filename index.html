@@ -70,6 +70,7 @@
         .rtan {
             width: 280px;
             height: 261px;
+            margin-top: 600px;
             margin-bottom: 5px;
             background-image: url('kirby7.png');
             background-position: center;
@@ -97,7 +98,7 @@
       let canPlayState = false;
 
       ctx.textAlign = 'center';
-      ctx.fillText('비디오 로딩 중..', 1280, 720);
+      ctx.fillText('비디오 로딩 중..', 300, 200);
 
       const videoElem = document.querySelector('.video');
       videoElem.addEventListener('canplaythrough', render);
