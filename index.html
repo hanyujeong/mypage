@@ -71,10 +71,11 @@
             width: 280px;
             height: 261px;
             margin-top: 2000px;
-            margin-bottom: 15px;
+            
             background-image: url('kirby7.png');
             background-position: center;
             position: absolute;
+            bottom: 15px;
         }
     </style>
 </head>
@@ -102,12 +103,48 @@
 
       const videoElem = document.querySelector('.video');
       videoElem.addEventListener('canplaythrough', render);
+        
+        margin-bottom: 16px;
 
       function render() {
                     
         ctx.drawImage(videoElem, 0, 0, 600, 350);
         requestAnimationFrame(render);
       }
+        
+        
+        function render() {
+        ctx.drawImage(videoElem, 0, 0, 600, 400);
+        imageData = ctx.getImageData(0, 0, 600, 400);
+        leng = imageData.data.length / 4;
+
+        for (let i = 0; i < leng; i++) {
+          switch (colorValue) {
+            case "red":
+              imageData.data[i * 4 + 0] = 255;
+              break;
+            case "green":
+              imageData.data[i * 4 + 1] = 255;
+              break;
+            case "blue":
+              imageData.data[i * 4 + 2] = 255;
+              break;
+          }
+        }
+        // 컬러 밸류에 따라 rgba에 해당하는 부분을 최대치로 끌어올려주는 원리!
+
+        ctx.putImageData(imageData, 0, 0);
+        requestAnimationFrame(render);
+      }
+
+      btnsElem.addEventListener("click", function (e) {
+        colorValue = e.target.getAttribute("data-color");
+      });
+        
+        
+        
+        
+        
     </script>
        
         <div class="rtan"></div>
