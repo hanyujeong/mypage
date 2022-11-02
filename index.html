@@ -34,7 +34,7 @@
         }
         .sub {
             color : #000000;
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 500;
             size : 14px;
             margin-top: 0px;
@@ -70,7 +70,7 @@
         .rtan {
             width: 280px;
             height: 261px;
-            margin-top: 1600px;
+            margin-top: 2000px;
             margin-bottom: 0px;
             background-image: url('kirby7.png');
             background-position: center;
@@ -104,6 +104,9 @@
       videoElem.addEventListener('canplaythrough', render);
 
       function render() {
+          
+          margin-bottom: 16px;
+          
         ctx.drawImage(videoElem, 0, 0, 600, 350);
         requestAnimationFrame(render);
       }
