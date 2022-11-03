@@ -75,6 +75,7 @@
             background-image: url('kirby7.png');
             background-position: center;
             position: absolute;
+            bottom: 10px;
           
         }
     </style>
@@ -107,7 +108,7 @@
 
       const videoElem = document.querySelector('.video');
       videoElem.addEventListener('canplaythrough', render);
-.
+
 
       function render() { 
         ctx.drawImage(videoElem, 0, 0, 600, 350);
